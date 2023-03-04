@@ -2,11 +2,11 @@
 pub mod sub_module;
 
 // 公開できない
-fn private() {
+fn _private() {
     println!("private");
 }
 
 // pubをつけると公開できる
-pub fn public() {
+pub fn _public() {
     println!("public");
 }
