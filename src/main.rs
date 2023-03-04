@@ -4,6 +4,7 @@ use crate::memory::_stack_overflow;
 mod memory;
 mod module;
 mod owenership;
+mod pointer;
 mod r#type;
 mod variable;
 
