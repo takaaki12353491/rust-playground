@@ -38,10 +38,28 @@ pub fn _string() {
 
     // String型はheapに保存される
     let mut s2 = String::from("hello");
-    println!("s2 stack memory address is {:?}", &s2);
+    println!("s2 stack address is {:?}", &s2);
     println!("s2 heap memory address is {:?}", s2.as_ptr());
     println!("s2 length is {:?}", s2.as_ptr());
     println!("s2 capacity is {:?}", s2.as_ptr());
     s2.push_str("_new");
     println!("new s2 value is {}", s2);
+}
+
+pub fn _vector() {
+    // vec!でベクター型の値を作成できる。
+    let mut v1 = vec![1, 2, 3, 4];
+    let mut v2 = vec![5, 6, 7, 8];
+    println!("v1 stack address is {:?}", &v1);
+    println!("v1 heap memory address is {:?}", v1.as_ptr());
+    println!("v1 length is {}", v1.len());
+    println!("v1 capacity is {}", v1.capacity());
+    v1.insert(1, 10);
+    println!("v1 value is {:?}", v1);
+    v1.remove(0);
+    println!("v1 value is {:?}", v1);
+    v1.append(&mut v2);
+    println!("v1 value is {:?}", v1);
+    // v3は空になる
+    println!("v2 value is {:?}", v2);
 }
