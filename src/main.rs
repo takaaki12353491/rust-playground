@@ -3,6 +3,7 @@ use crate::memory::_stack_overflow;
 // modで読み込まないとrust-analyzerが効かない場合がある
 mod memory;
 mod module;
+mod owenership;
 mod r#type;
 mod variable;
 
