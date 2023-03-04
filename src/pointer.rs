@@ -21,6 +21,13 @@ pub fn _rewrite() {
     *r3 = String::from("hello world");
 }
 
+pub fn _box_pointer() {
+    let t1 = (10, String::from("hello"));
+    // Stackに保存していた情報をheapに保存する
+    let mut b1 = Box::new(t1);
+    (*b1).1 += " world";
+}
+
 pub fn _dangling_pointer() {
     let _r;
     {

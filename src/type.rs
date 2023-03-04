@@ -69,9 +69,3 @@ pub fn _vector() {
     // v3は空になる
     println!("v2 value is {:?}", v2);
 }
-
-pub fn _box_pointer() {
-    let t1 = (10, String::from("hello"));
-    let mut b1 = Box::new(t1);
-    (*b1).1 += " world";
-}
