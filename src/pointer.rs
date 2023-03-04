@@ -27,13 +27,3 @@ pub fn _box_pointer() {
     let mut b1 = Box::new(t1);
     (*b1).1 += " world";
 }
-
-pub fn _dangling_pointer() {
-    let _r;
-    {
-        let x = 5;
-        _r = &x;
-    }
-    // 参照rは実態xより長生きしてはいけない
-    //println!("r is {}", r);
-}
