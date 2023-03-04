@@ -1,4 +1,5 @@
 // modで読み込まないとrust-analyzerが効かない場合がある
+mod lifetime;
 mod memory;
 mod module;
 mod owenership;
