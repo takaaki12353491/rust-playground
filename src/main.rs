@@ -7,6 +7,7 @@ mod module;
 mod owenership;
 mod pointer;
 mod r#struct;
+mod r#trait;
 mod r#type;
 mod variable;
 
