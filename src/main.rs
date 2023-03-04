@@ -1,5 +1,6 @@
 // modで読み込まないとrust-analyzerが効かない場合がある
 mod module;
+mod variable;
 
 fn main() {
     // !はマクロ
