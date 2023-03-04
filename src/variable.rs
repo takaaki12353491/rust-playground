@@ -30,3 +30,24 @@ pub fn _scope() {
         println!("Memory address is {}", x);
     }
 }
+
+pub fn _tuple() {
+    // ()でタプルを作れる
+    let t = (1, 0.5, "x");
+
+    // ()でタプルから値を取得できる
+    let (x, y, z) = t;
+    println!("t values is {} {} {}", x, y, z);
+
+    // .0などつけることで値を取得できる
+    println!("t values is {} {} {}", t.0, t.1, t.2);
+
+    // ネストできる
+    let mut t2 = ((0, 1), (2, 3));
+    // refでポインタを取得できる
+    let ((ref mut px1, ref _px2), _) = t2;
+    // *でポインタの値を参照できる
+    *px1 = 4;
+    // {:?}で複雑なデータ型を表示できる
+    println!("t2 values is {:?}", t2);
+}
