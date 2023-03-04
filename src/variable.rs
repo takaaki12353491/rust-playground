@@ -51,3 +51,13 @@ pub fn _tuple() {
     // {:?}で複雑なデータ型を表示できる
     println!("t2 values is {:?}", t2);
 }
+
+pub fn _array() {
+    // []で配列を作る
+    let a = [1, 2, 3, 4, 5];
+    // 0を10個の配列を作る
+    let b = [0; 10];
+    println!("a values is {:?}", a);
+    // []で配列の要素を取り出せる
+    println!("b0 values is {}", b[0]);
+}
