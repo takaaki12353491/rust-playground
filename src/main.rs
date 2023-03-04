@@ -1,4 +1,4 @@
-// mainファイル以外が同じディレクトリにあるとrust-analyzerが効かない場合がある
+// modで読み込まないとrust-analyzerが効かない場合がある
 fn main() {
     println!("Hello, world!");
 }
