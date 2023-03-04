@@ -1,4 +1,5 @@
 // modで読み込まないとrust-analyzerが効かない場合がある
+mod r#enum;
 mod generics;
 mod lifetime;
 mod memory;
