@@ -1,3 +1,9 @@
+// ボックスポインタを使うことで再起的な型定義ができる
+enum _List {
+    Node(i32, Box<_List>),
+    Nil,
+}
+
 pub fn _tuple() {
     // ()でタプルを作れる
     let t = (1, 0.5, "x");
@@ -62,4 +68,10 @@ pub fn _vector() {
     println!("v1 value is {:?}", v1);
     // v3は空になる
     println!("v2 value is {:?}", v2);
+}
+
+pub fn _box_pointer() {
+    let t1 = (10, String::from("hello"));
+    let mut b1 = Box::new(t1);
+    (*b1).1 += " world";
 }
