@@ -6,9 +6,9 @@ enum _List {
 
 // structで構造体を作れる
 // ジェネリクス型を指定できる
-struct _Point<T> {
+struct _Point<T, U> {
     x: T,
-    y: T,
+    y: U,
 }
 
 pub fn _tuple() {
