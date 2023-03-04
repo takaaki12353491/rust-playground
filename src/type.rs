@@ -69,3 +69,15 @@ pub fn _vector() {
     // v3は空になる
     println!("v2 value is {:?}", v2);
 }
+
+// Tはジェネリクス型
+// Tにトレイト境界を指定できる
+fn _largest<T: PartialOrd + Copy>(list: Vec<T>) -> T {
+    let mut largest = list[0];
+    for item in list {
+        if largest < item {
+            largest = item;
+        }
+    }
+    largest
+}
