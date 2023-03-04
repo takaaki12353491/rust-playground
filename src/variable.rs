@@ -61,3 +61,20 @@ pub fn _array() {
     // []で配列の要素を取り出せる
     println!("b0 values is {}", b[0]);
 }
+
+pub fn _string() {
+    let s1 = "hello";
+    // as_ptr()でstaticメモリのアドレスを取得できる
+    println!("s1 static memory address is {:?}", s1.as_ptr());
+    // len()で実データのbyteを取得できる
+    println!("s length is {}", s1.len());
+
+    // String型はheapに保存される
+    let mut s2 = String::from("hello");
+    println!("s2 stack memory address is {:?}", &s2);
+    println!("s2 heap memory address is {:?}", s2.as_ptr());
+    println!("s2 length is {:?}", s2.as_ptr());
+    println!("s2 capacity is {:?}", s2.as_ptr());
+    s2.push_str("_new");
+    println!("new s2 value is {}", s2);
+}
