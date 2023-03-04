@@ -4,6 +4,13 @@ enum _List {
     Nil,
 }
 
+// structで構造体を作れる
+// ジェネリクス型を指定できる
+struct _Point<T> {
+    x: T,
+    y: T,
+}
+
 pub fn _tuple() {
     // ()でタプルを作れる
     let t = (1, 0.5, "x");
