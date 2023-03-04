@@ -20,3 +20,13 @@ pub fn _pointer() {
     x = x + 1;
     println!("Memory address is {:p}", &x);
 }
+
+pub fn _scope() {
+    let x = 1;
+    println!("Memory address is {}", x);
+    // スコープで変数は独立
+    {
+        let x = 2;
+        println!("Memory address is {}", x);
+    }
+}
