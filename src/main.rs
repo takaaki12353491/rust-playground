@@ -2,6 +2,7 @@
 mod module;
 
 fn main() {
+    // !はマクロ
     println!("Hello, world!");
 }
 
