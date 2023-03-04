@@ -10,3 +10,13 @@ pub fn _mutable() {
     x = 2;
     println!("x is {}", x);
 }
+
+pub fn _pointer() {
+    let mut x = 1;
+    // &をつけるとアドレスを取得できる
+    // {:p}はポインタ
+    println!("Memory address is {:p}", &x);
+    // 再代入するとアドレスが変わる
+    x = x + 1;
+    println!("Memory address is {:p}", &x);
+}
